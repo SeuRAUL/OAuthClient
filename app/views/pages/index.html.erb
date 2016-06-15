@@ -1,0 +1,6 @@
+<h1>Welcome!</h1>
+<% if session[:access_token] %>
+  <%= link_to 'Show some money', api_tests_path %>
+<% else %>
+  <%= link_to 'Authenticate via oPRO', new_opro_token_path %>
+<% end %>
